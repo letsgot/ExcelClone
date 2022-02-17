@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-Clone</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu_bar">
+        <!-- new - open - save  -->
+        <div class="new_open_save_container">
+            <div class="icon_container">
+                <i class="fas fa-file"></i>
+            </div>
+            <div class="icon_container">
+                <i class="fas fa-envelope-open"></i>
+            </div>
+            <div class="icon_container">
+                <i class="fas fa-save"></i>
+            </div>
+            <input type="file" name="" id="file_Input" style="display: none;">
+        </div>
+        <!-- font family and font size  -->
+        <!-- using select and options  -->
+        <div class="formatting_container">
+            <select class="font_family_input formatting_input">
+                <option style="font-family:sans-serif" value="sans-serif">sans-serif</option>
+                <option style="font-family:monospace" value="monospace">monospace</option>
+                <option style="font-family:serif" value="serif">serif</option>
+                <option style="font-family:cursive" value="cursive">cursive</option>
+                <!-- <option value="Courier New">Courier New</option> -->
+                <option style="font-family:Noto Sans" value="Noto Sans">Noto Sans</option>
+                <option style="font-family:Arial" value="Arial">Arial</option>
+                <option style="font-family:Calibri" value="Calibri">Calibri</option>
+                <option style="font-family:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family:Courier New" value="Courier New">Courier New</option>
+                <option style="font-family:Palatino" value="Palatino">Palatino</option>
+            </select>
+            <select class="font_size_input formatting_input">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14" selected>14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+            </select>
+        </div>
+        <!-- bold - italic - underline  -->
+        <div class="bui_container">
+            <i class="fas fa-bold"></i>
+            <i class="fas fa-underline"></i>
+            <i class="fas fa-italic"></i>
+        </div>
+
+        <!-- left-align right-align center -->
+        <div class="alignment_container">
+            <i class="fas fa-align-left"></i>
+            <i class="fas fa-align-center"></i>
+            <i class="fas fa-align-right"></i>
+            <i class="fas fa-align-justify"></i>
+        </div>
+
+        <!-- colors  -->
+        <div class="color_container">
+            <i class="fas fa-tint"></i>
+            <i class="fas fa-fill-drip"></i>
+            <input type="color" action="fg-color" class="text_color" style="display: none;" />
+            <input type="color" action="bg-color" class="background_color" style="display: none;" />
+        </div>
+    </div>
+    <div class="formula_bar">
+        <input type="text" class="address_bar">
+        <img src="pngwing.com.png" alt="">
+        <input type="text" class="formula_execute_bar" placeholder="Formula with space seperated such that ( A1 + A2 )">
+    </div>
+    <div class="grid_container">
+        <div class="top_left_row">
+
+        </div>
+        <div class="top_row">
+
+        </div>
+        <div class="left_col">
+
+        </div>
+        <div class="grid">
+
+        </div>
+    </div>
+    <div class="sheets_bar">
+        <div class="add-sheet_container">
+            <i class="fas fa-plus icon"></i>
+        </div>
+        <div class="sheets-list">
+            <div class="sheet active-sheet" sheetIdx="0"> Sheet 1</div>
+        </div>
+    </div>
+    <template>
+        <div class="cell" contenteditable="true" rId="" cId=""></div>
+        <div class="sheet" sheetIdx=""></div>
+    </template>
+
+    <script src="init.js"></script>
+    <script src="menu.js"></script>
+    <script src="newopensave.js"></script>
+    <script src="formula.js"></script>
+</body>
+
+</html>

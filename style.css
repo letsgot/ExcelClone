@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+select{
+    outline: none;
+    border: none;
+    background-color: white;
+    border-right: 0.5px solid black;
+}
+
+
+
+/* <<<<<<<----------- Menu Bar ---------->>>>>>> */
+.menu_bar{
+    height: 5rem;
+    /* background-color: lightblue; */
+    /* background-color: #007b49; */
+    display:flex;
+    align-items: center;
+}
+.menu_bar>*{
+    border-right:0.5px solid black;
+    height:70%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+
+
+.new_open_save_container{
+    width:15vw;
+}
+
+.fas{
+    font-size:1.4rem;
+    color: #058f58;
+    cursor: pointer;
+}
+
+.fas:hover{
+   transform: scale(1.1);
+   color: #1d5740;
+}
+
+.selected{
+    background-color: #d9dfd9;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #d9dfd9;
+}
+
+.formatting_container{
+    width: 30vw;
+    display: flex;
+    padding: 3px;
+}
+
+.formatting_input{
+    width: 100%;
+}
+
+.font_family_input{
+    flex: 2;
+}
+.font_size_input{
+    flex: 1;
+}
+
+.bui_container,.alignment_container,.color_container{
+    width: 17%;
+}
+
+.colorpick-eyedropper-input-trigger{
+    display: none;
+}
+
+.bui_container>*,.alignment_container>*,.color_container>*{
+    font-size: 1rem;
+}
+
+/* <<<<<<<<---------- Formula Bar --------->>> */
+.formula_bar{
+    height: 2rem;
+    background-color: rgb(228, 220, 220);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.formula_bar img{
+    height: 60%;
+}
+
+.address_bar{
+    margin-right: 1rem;
+    border: none;
+    height: 70%;
+    width: 4rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    outline: none;
+    border-right: lightgray 0.5px solid;
+}
+
+.formula_execute_bar{
+    margin-left: 1rem;
+    height: 70%;
+    width: calc(100vw - 8rem);
+}
+
+
+/* <<<------- Sheet Bar -------->>> */
+.sheets_bar{
+    height: 2.5rem;
+    /* background-color: lightyellow; */
+    display: flex;
+    padding : 0.3rem;
+}
+
+.add-sheet_container{
+    height: 100%;
+    min-width:30px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    font-size: 1.3rem;
+    color:lightgreen;
+    cursor: pointer;
+}
+.sheets-list{
+
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+}
+.sheets-list::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sheets-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.sheet{
+    min-width:60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid;
+    cursor: pointer;
+}
+.active-sheet
+{
+    background-color: rgb(180, 160, 160);
+}
+
+
+
+
+
+/* <<<----------------------Grid Container---------------->>> */
+.grid_container{
+     height: calc(100vh - (5rem + 2.5rem + 2rem));
+     /* background-color: lightgreen; */
+     overflow-x: scroll;
+     position: relative;
+}
+
+.top_left_row{
+    height: 1.3rem;
+    width: 2rem;
+    /* background-color: rgb(153, 147, 147); */
+    border-right: 0.2rem solid lightgray;
+    border-bottom: 0.2rem solid lightgray;
+}
+
+.top_row{
+    display: flex;
+    position: relative;
+    top: -1.4rem;
+    left: 1.95rem;
+   
+}
+
+
+.left_col{
+    border: 0.5px solid lightgray;
+    position: relative;
+    top: -1.5rem;
+    width: 2rem;
+    background-color: #e5e5e5;
+}
+
+.cell{
+    border-bottom: 0.2px solid lightgrey;
+    border-right: 0.2px solid lightgrey;
+    height: 1.4rem;
+    /* overflow: hidden; */
+    text-align: center;
+    outline : none;
+    /* font-family: 'Courier New'; */
+}
+
+.grid{
+    position: absolute;
+    top: 1.3rem;
+    left : 2rem;
+}
+
+.grid .cell{
+    min-width: 5rem;
+}
+
+.top_row .cell{
+    min-width: 5rem;
+    border: 0.5px solid lightgray;
+    background-color: #e5e5e5;
+}
+
+.row{
+    display: flex;
+}
