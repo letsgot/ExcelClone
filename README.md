@@ -9,5 +9,7 @@ Features :-
 * every value that obtained from the formula  changes accordingly to their new values.
 * you can add more than one or any number of sheets also.
 * column are from A to Z and row are from 1 to 100.
-
+* we can download our excel file/sheets
+* we can save and delete our excel file/sheets also.
+* and open an exist file/sheets also
  
